@@ -1,15 +1,18 @@
 /**
  * Represents a node in the Binary Search Tree.
+
+By Banga Dennis 
+p15/1475/2012
  */
 
 public class Node<T> {
-  //The value present in the node.
+  //value present in the node.
   public int value;
 
-  //The reference to the left subtree.
+  //Reference to the left subtree.
   public Node left;
 
-  //The reference to the right subtree.
+  //Reference to the right subtree.
   public Node right;
   public Node(int value) {
 

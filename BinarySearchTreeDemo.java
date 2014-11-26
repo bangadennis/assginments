@@ -1,3 +1,13 @@
+/*
+BinarySearchTreeDemo class 
+demonstrates the 
+InOder Traversal, Preorder traversal and PostOrder traversal
+of the BinarySearchTree
+
+Program by Banga Dennis Muiruri
+p15/1475/2012
+*/
+
 import java.util.Scanner;
 
 public class BinarySearchTreeDemo {
@@ -5,7 +15,8 @@ public class BinarySearchTreeDemo {
 
   public static void main(String[] args) {
 
-    BinarySearchTree bst = new BinarySearchTree();
+
+    BinarySearchTree binarySearchTree = new BinarySearchTree();
 
     System.out.println("Enter a  value to the BST, input -1 to terminate\n");
     int count=1;
@@ -19,7 +30,7 @@ public class BinarySearchTreeDemo {
         {
             break;
         }
-        bst.insert(value);
+        binarySearchTree.insert(value);
         count=count+1;
 
 
@@ -28,20 +39,15 @@ public class BinarySearchTreeDemo {
 
     System.out.println("Inorder traversal");
 
-    bst.printInorder();
+     binarySearchTree.printInorder();
 
- 
     System.out.println("Preorder Traversal");
 
-    bst.printPreorder();
+     binarySearchTree.printPreorder();
 
     System.out.println("Postorder Traversal");
 
-    bst.printPostorder();
+     binarySearchTree.printPostorder();
 
-    System.out.println("The minimum value in the BST: " + bst.findMinimum());
-
-    System.out.println("The maximum value in the BST: " + bst.findMaximum());
- 
   }
 }

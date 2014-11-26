@@ -1,7 +1,15 @@
+/*
+This programs represents  Binary Search tree,
+Data can be inserted in the binary tree
+and represents traversal through the tree 
+using preorder, postorder and inorder. 
 
-/**
- * Represents the Binary Search Tree.
- */
+Program by Banga Dennis Muiruri
+p15/1475/2012
+*/
+
+
+// Represents the Binary Search Tree.
 public class BinarySearchTree {
  
   //Refrence for the root of the tree.
@@ -25,7 +33,8 @@ public class BinarySearchTree {
     return this;
   }
 
- 
+
+ //Method to insert recursively 
   private void insertRec(Node latestRoot, Node node) {
 
  
@@ -60,63 +69,28 @@ public class BinarySearchTree {
 
   }
 
-  /**
-   * Returns the minimum value in the Binary Search Tree.
-   */
-  public int findMinimum() {
-    if (root == null) {
-      return 0;
-    }
-    Node currNode = root;
-    while (currNode.left != null) {
-      currNode = currNode.left;
-    }
-    return currNode.value;
-  }
-
-  /**
-   * Returns the maximum value in the Binary Search Tree
-   */
-  public int findMaximum() {
-
-    if (root == null) {
-
-      return 0;
-    }
-
-    Node currNode = root;
-    while (currNode.right != null) {
-
-      currNode = currNode.right;
-    }
-    return currNode.value;
-  }
-  /**
-   * Printing the contents of the tree in an inorder way.
-   */
+ //Printing the contents of the binary search tree in an inorder way.
+ 
   public void printInorder() {
     printInOrderRec(root);
     System.out.println("");
   }
  
 
-  /**
-   * Helper method to recursively print the contents in an inorder way
-   */
+  //Method to recursively print the contents in an inorder way
+
   private void printInOrderRec(Node currRoot) {
     if (currRoot == null) {
       return;
     }
 
     printInOrderRec(currRoot.left);
-    System.out.print(currRoot.value + ", ");
+    System.out.print(currRoot.value + " ,");
     printInOrderRec(currRoot.right);
   }
 
 
-  /**
-   * Printing the contents of the tree in a Preorder way.
-   */
+ // Printing the contents of the tree in a Preorder way.
 
   public void printPreorder() {
     printPreOrderRec(root);
@@ -124,9 +98,7 @@ public class BinarySearchTree {
 
   }
 
-  /**
-   * Helper method to recursively print the contents in a Preorder way
-   */
+  //Method to recursively print the contents in a Preorder way
   private void printPreOrderRec(Node currRoot) {
     if (currRoot == null) {
       return;
@@ -137,9 +109,9 @@ public class BinarySearchTree {
     printPreOrderRec(currRoot.right);
   }
 
-  /**
-   * Printing the contents of the tree in a Postorder way.
-   */
+  
+ //Printing the contents of the tree in a Postorder way.
+
   public void printPostorder() {
 
     printPostOrderRec(root);
@@ -148,9 +120,7 @@ public class BinarySearchTree {
 
   }
 
-  /**
-   * Helper method to recursively print the contents in a Postorder way
-   */
+  // Method to recursively print the contents in a Postorder way
 
   private void printPostOrderRec(Node currRoot) {
     if (currRoot == null) {
